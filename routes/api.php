@@ -29,7 +29,7 @@ Route::middleware('auth:sanctum')->group(function () { // Rute di sini butuh log
     Route::delete('/users/{user}', [UserController::class, 'destroy']); // Hapus user
 
     // User yang udah dihapus (soft delete)
-    Route::get('/users/deleted', [UserController::class, 'deleted']); // Lihat daftar user yang dihapus
+    Route::get('/users/deleted/detail', [UserController::class, 'deleted']); // Lihat daftar user yang dihapus
     Route::post('/users/{id}/restore', [UserController::class, 'restore']); // Balikin user yang dihapus
 
     // Import user dari file
